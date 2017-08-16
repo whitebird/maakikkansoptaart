@@ -74,7 +74,9 @@
     <script>
         $("#check").click(function () {
             var toCheck = $("#naam").val().toLowerCase()
-            if (toCheck === "cas" || toCheck === "martika") {
+            if( toCheck.indexOf(" ") != -1) {
+                alert("Ik geef geen taart aan mensen met spaties in hun naam. (Enkel voornaam ingeven)")
+            } else if (toCheck === "cas" || toCheck === "martika") {
                 alert("NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
             } else {
                 alert("Ja!")
