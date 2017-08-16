@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ted Talk</title>
+    <meta name="description" content="Ted talk woordenlijst">
+    <meta name="author" content="Sebastiaan Jansen">
+    <style>
+        body {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        #woord {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5vw;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .page-wrap {
+            min-height: 100%;
+            /* equal to footer height */
+            margin-bottom: -50px;
+        }
+
+        .page-wrap:after {
+            content: "";
+            display: block;
+        }
+
+        .page-wrap:after {
+            height: 50px;
+        }
+
+        input[type="text"] {
+            font-size: 5vw;
+            text-align: center;
+        }
+
+        button {
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-wrap">
+        <div id="woord">Maakt <input id="naam" type="text" /> kans op taart? <br><button id="check">IK HEB HONGER</button></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+
+        </script>
+    <script>
+        $("#check").click(function () {
+            var toCheck = $("#naam").val().toLowerCase()
+            if (toCheck === "cas" || toCheck === "martika") {
+                alert("NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
+            } else {
+                alert("Ja!")
+            }
+        });
+    </script>
+</body>
+
+</html>
