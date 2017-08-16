@@ -64,7 +64,9 @@
 <body>
 
     <div class="page-wrap">
-        <div id="woord">Maakt <input id="naam" type="text" /> kans op taart? <br><button id="check">IK HEB HONGER</button></div>
+        <form>
+        <div id="woord">Maakt <input id="naam" type="text" /> kans op taart? <br><button type="submit">IK HEB HONGER</button></div>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -72,7 +74,8 @@
 
         </script>
     <script>
-        $("#check").click(function () {
+        $('form').on('submit', function(e) {
+            e.preventDefault()
             var toCheck = $("#naam").val().toLowerCase()
             if( toCheck.indexOf(" ") != -1) {
                 alert("Ik geef geen taart aan mensen met spaties in hun naam. (Enkel voornaam ingeven)")
